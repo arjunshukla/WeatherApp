@@ -33,7 +33,6 @@
 		F27C23CB284536AF00A4DA41 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27C23CA284536AF00A4DA41 /* UIImageView+Extensions.swift */; };
 		F27C23CD2845386100A4DA41 /* ForecastAPIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27C23CC2845386100A4DA41 /* ForecastAPIHelper.swift */; };
 		F27C23CF28454DE400A4DA41 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27C23CE28454DE400A4DA41 /* Forecast.swift */; };
-		F27C23D128455CA200A4DA41 /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27C23D028455CA200A4DA41 /* TaskManager.swift */; };
 		F27C23D428456FF800A4DA41 /* CityTestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27C23D328456FF800A4DA41 /* CityTestHelper.swift */; };
 		F27C23D6284578C300A4DA41 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27C23D5284578C300A4DA41 /* Date+Extensions.swift */; };
 		F27C23D82845B5E700A4DA41 /* ImageAPIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27C23D72845B5E700A4DA41 /* ImageAPIHelper.swift */; };
@@ -88,7 +87,6 @@
 		F27C23CA284536AF00A4DA41 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		F27C23CC2845386100A4DA41 /* ForecastAPIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastAPIHelper.swift; sourceTree = "<group>"; };
 		F27C23CE28454DE400A4DA41 /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
-		F27C23D028455CA200A4DA41 /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
 		F27C23D328456FF800A4DA41 /* CityTestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTestHelper.swift; sourceTree = "<group>"; };
 		F27C23D5284578C300A4DA41 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		F27C23D72845B5E700A4DA41 /* ImageAPIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAPIHelper.swift; sourceTree = "<group>"; };
@@ -273,7 +271,6 @@
 			isa = PBXGroup;
 			children = (
 				F27C23C62845324800A4DA41 /* API.swift */,
-				F27C23D028455CA200A4DA41 /* TaskManager.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -443,7 +440,6 @@
 				F27C23C72845324800A4DA41 /* API.swift in Sources */,
 				F254EEBD28452DCC00D6E671 /* ForecastResponseModel.swift in Sources */,
 				F254EEB328450BEC00D6E671 /* ListViewModel.swift in Sources */,
-				F27C23D128455CA200A4DA41 /* TaskManager.swift in Sources */,
 				F27C23CD2845386100A4DA41 /* ForecastAPIHelper.swift in Sources */,
 				F254EE992844D1C700D6E671 /* Storyboarded.swift in Sources */,
 				F254EEB92845101500D6E671 /* City.swift in Sources */,

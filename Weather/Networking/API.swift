@@ -23,9 +23,6 @@ class API {
 
     static func getData(url: URL,
                         completion: @escaping (Data?, URLResponse?, Error?) -> Void) {
-//        TaskManager.shared.dataTask(with: url) { data, response, error in
-//            completion(data, response, error)
-//        }
         URLSession.shared.dataTask(with: url) { data, response, error in
             completion(data, response, error)
         }.resume()
