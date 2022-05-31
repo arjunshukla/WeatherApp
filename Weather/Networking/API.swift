@@ -17,7 +17,7 @@ class API {
     
     private static var baseUrl = "https://api.weather.gov"
 
-    static func getForecastUrlString(latitude: String, longitude: String) -> URL? {
+    static func getForecastUrl(latitude: String, longitude: String) -> URL? {
         URL(string: "\(baseUrl)/gridpoints/TOP/\(latitude),\(longitude)/forecast")
     }
 

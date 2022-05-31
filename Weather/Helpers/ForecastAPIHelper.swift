@@ -21,7 +21,7 @@ class ForecastAPIHelper {
 
         for city in CityTestHelper.cityList {
             
-            urlCacheKey = API.getForecastUrlString(latitude: city.latitude, longitude: city.longitude) as AnyObject
+            urlCacheKey = API.getForecastUrl(latitude: city.latitude, longitude: city.longitude) as AnyObject
             
             if let forecastFromCache = Cache.forecastCache.object(forKey: urlCacheKey) {
                 forecasts = forecastFromCache as? [Forecast]
@@ -31,7 +31,7 @@ class ForecastAPIHelper {
 
             group.enter()
             backgroundQueue.async {
-                if let url = API.getForecastUrlString(latitude: city.latitude, longitude: city.longitude) {
+                if let url = API.getForecastUrl(latitude: city.latitude, longitude: city.longitude) {
                     API.getData(url: url) { [weak self] data, response, error in
                         guard let self = self,
                               error == nil else {
