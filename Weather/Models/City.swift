@@ -8,6 +8,7 @@
 import UIKit
 
 struct City {
+    let id: Int
     let name: String
     let latitude: String
     let longitude: String

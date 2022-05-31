@@ -25,10 +25,17 @@ class ListViewModel {
     func getForecasts() {
         Cache.forecastCache.removeAllObjects()
         apiHelper?.fetchForecastData(completion: { [weak self] forecasts in
-            if let forecasts = forecasts {
-                self?.forecasts = forecasts
-                self?.delegate?.updateData()
+            if let forecasts = forecasts,
+            let self = self {
+                self.forecasts = self.sortByCities(forecasts)
+                self.delegate?.updateData()
             }
+        })
+    }
+    
+    private func sortByCities(_ forecasts: [Forecast]) -> [Forecast] {
+        return forecasts.sorted(by: {
+            $0.city.id < $1.city.id
         })
     }
     
@@ -47,6 +54,5 @@ class ListViewModel {
         let cellModel = CityTableViewCell.Model(cityName: forecast.city.name,
                                                 temperature: combinedTemperature, shortForecast: forecast.period.shortForecast, forecaseImageUrl: forecast.period.icon)
         return cellModel
-        
     }
 }
