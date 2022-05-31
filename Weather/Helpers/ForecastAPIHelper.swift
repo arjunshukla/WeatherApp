@@ -9,7 +9,7 @@ import Foundation
 
 class ForecastAPIHelper {
     
-//    private var backgroundQueue = DispatchQueue(label: "com.weather.background", qos: .background, attributes: .concurrent)
+    private var backgroundQueue = DispatchQueue(label: "com.weather.background", qos: .background, attributes: .concurrent)
     
     private var writerQueue = DispatchQueue(label: "com.threadSafe.writer", attributes: .concurrent)
     
@@ -30,6 +30,7 @@ class ForecastAPIHelper {
             }
 
             group.enter()
+            backgroundQueue.async {
                 if let url = API.getForecastUrlString(latitude: city.latitude, longitude: city.longitude) {
                     API.getData(url: url) { [weak self] data, response, error in
                         guard let self = self,
@@ -57,6 +58,7 @@ class ForecastAPIHelper {
                 } else {
                     self.group.leave()
                 }
+            }
         }
         group.notify(queue: .main) {
             Cache.forecastCache.setObject(forecasts as AnyObject, forKey: urlCacheKey)
