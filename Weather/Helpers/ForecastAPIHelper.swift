@@ -77,7 +77,7 @@ class ForecastAPIHelper {
                else {
                   return nil
               }
-        let tomorrowForecast = dayTimeData.count > 1 ? dayTimeData[1] : dayTimeData[0]
+        let tomorrowForecast = dayTimeData.count > 1 ? dayTimeData[city.id] : dayTimeData[0]
         
         let forecast = Forecast(city: city, period: tomorrowForecast)
         return forecast
